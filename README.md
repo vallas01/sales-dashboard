@@ -210,6 +210,24 @@ Later endpoints may support:
 -   Aggregations
 -   Individual sales records
 
+### PowerShell Examples
+
+Use `curl.exe` in PowerShell to send requests to the local backend:
+ (or use Swagger http://127.0.0.1:8000/docs#/)
+
+``` powershell
+curl.exe -X GET -H "Content-Type: application/json" "http://127.0.0.1:8000/sales/1"
+
+curl.exe -X POST -H "Content-Type: application/json" -d '{\"model\":\"Kia\"}' "http://127.0.0.1:8000/sales"
+
+curl.exe -X POST -H "Content-Type: application/json" -d '{\"model\":\"Porsche\",\"volume\":\"3\"}' "http://127.0.0.1:8000/sales"
+
+curl.exe -X GET -H "Content-Type: application/json" "http://127.0.0.1:8000/sales/1"
+
+curl.exe -X POST -H "Content-Type: application/json" "http://127.0.0.1:8000/sales?limit=3"
+
+```
+
 ## Planned Frontend
 
 The React application will:
